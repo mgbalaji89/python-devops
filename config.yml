@@ -1,0 +1,26 @@
+version: 2.1
+
+# Use the official CircleCI Python orb to simplify configuration
+orbs:
+  python: circleci/python@2.0.3
+
+jobs:
+  build_and_test:
+    # Use the default executor from the Python orb, which provides a Docker image
+    executor: python/default 
+    steps:
+      # Checkout the source code from your repository
+      - checkout
+      # Install dependencies using pip (looks for requirements.txt by default)
+      - python/install-packages:
+          pkg-manager: pip
+      # Run tests using pytest
+      - run:
+          name: Run tests
+          command: pytest
+
+workflows:
+  build_test_workflow:
+    jobs:
+      # Run the build_and_test job
+      - build_and_test
