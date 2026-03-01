@@ -1,0 +1,8 @@
+def test_addition():
+    assert 2 + 3 == 5
+
+def test_subtraction():
+    assert 10 - 5 == 5
+
+def test_string():
+    assert "devops".upper() == "DEVOPS"
