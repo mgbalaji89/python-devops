@@ -3,6 +3,9 @@ def test_addition():
 
 def test_subtraction():
     assert 10 - 5 == 5
-
+    
+def test_multiplication():
+    assert 10 * 5 == 50
+    
 def test_string():
     assert "devops".upper() == "DEVOPS"
