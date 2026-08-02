@@ -12,3 +12,5 @@ def test_diision():
     
 def test_string():
     assert "devops".upper() == "DEVOPS"
+def test_second_string():
+    assert "SECOND".lower() == "second"
